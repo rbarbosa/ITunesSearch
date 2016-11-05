@@ -97,6 +97,10 @@
 		F460C8221DCE3AEC0041953E /* iMusicSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F460C8551DCE3C110041953E /* View Models */,
+				F460C8531DCE3BCB0041953E /* Views */,
+				F460C8521DCE3BBA0041953E /* Models */,
+				F460C8511DCE3BAF0041953E /* Data Sources */,
 				F460C8231DCE3AEC0041953E /* AppDelegate.swift */,
 				F460C8251DCE3AEC0041953E /* ViewController.swift */,
 				F460C8271DCE3AEC0041953E /* Main.storyboard */,
@@ -123,6 +127,43 @@
 				F460C8451DCE3AEC0041953E /* Info.plist */,
 			);
 			path = iMusicSearchUITests;
+			sourceTree = "<group>";
+		};
+		F460C8511DCE3BAF0041953E /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		F460C8521DCE3BBA0041953E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F460C8531DCE3BCB0041953E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F460C8541DCE3BD90041953E /* View Controllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F460C8541DCE3BD90041953E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			path = "Views/View Controllers";
+			sourceTree = "<group>";
+		};
+		F460C8551DCE3C110041953E /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
