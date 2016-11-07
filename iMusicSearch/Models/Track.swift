@@ -19,5 +19,6 @@ struct Track {
     let releaseDate: Date
     let price: NSNumber
     let trackViewUrl: String
+    let currency: String
     
 }

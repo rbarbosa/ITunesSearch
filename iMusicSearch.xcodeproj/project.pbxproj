@@ -19,6 +19,8 @@
 		F4ED07EC1DD097E900702715 /* ITunesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07EB1DD097E900702715 /* ITunesDataSource.swift */; };
 		F4ED07EE1DD0D46B00702715 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07ED1DD0D46B00702715 /* ListItemCell.swift */; };
 		F4ED07F01DD0D77D00702715 /* ListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07EF1DD0D77D00702715 /* ListItemCellViewModel.swift */; };
+		F4ED07F21DD12F1B00702715 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07F11DD12F1B00702715 /* DetailViewController.swift */; };
+		F4ED07F41DD12F5A00702715 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07F31DD12F5900702715 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F4ED07EB1DD097E900702715 /* ITunesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesDataSource.swift; sourceTree = "<group>"; };
 		F4ED07ED1DD0D46B00702715 /* ListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		F4ED07EF1DD0D77D00702715 /* ListItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCellViewModel.swift; sourceTree = "<group>"; };
+		F4ED07F11DD12F1B00702715 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "iMusicSearch/Views/View Controllers/DetailViewController.swift"; sourceTree = SOURCE_ROOT; };
+		F4ED07F31DD12F5900702715 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F460C8561DCE3DBA0041953E /* ListViewController.swift */,
+				F4ED07F11DD12F1B00702715 /* DetailViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "Views/View Controllers";
@@ -177,6 +182,7 @@
 			children = (
 				F460C8581DCE414E0041953E /* ListViewModel.swift */,
 				F4ED07EF1DD0D77D00702715 /* ListItemCellViewModel.swift */,
+				F4ED07F31DD12F5900702715 /* DetailViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -322,9 +328,11 @@
 				F460C8241DCE3AEC0041953E /* AppDelegate.swift in Sources */,
 				F4ED07F01DD0D77D00702715 /* ListItemCellViewModel.swift in Sources */,
 				F4ED07EE1DD0D46B00702715 /* ListItemCell.swift in Sources */,
+				F4ED07F41DD12F5A00702715 /* DetailViewModel.swift in Sources */,
 				F4ED07EC1DD097E900702715 /* ITunesDataSource.swift in Sources */,
 				F460C8591DCE414E0041953E /* ListViewModel.swift in Sources */,
 				F4ED07E81DD0916800702715 /* Track.swift in Sources */,
+				F4ED07F21DD12F1B00702715 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

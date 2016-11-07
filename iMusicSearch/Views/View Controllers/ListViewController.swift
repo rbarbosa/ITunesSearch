@@ -24,6 +24,16 @@ final class ListViewController: UIViewController {
         
         setUpSearchController()
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let indexPath = listTableView.indexPathForSelectedRow {
+            listTableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,15 +53,22 @@ final class ListViewController: UIViewController {
         searchController.searchBar.delegate = self
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetailViewController" {
+            let detailViewController = segue.destination as! DetailViewController
+            if let indexPath = listTableView.indexPathForSelectedRow {
+                detailViewController.viewModel = viewModel.detailViewModel(for: indexPath)
+            }
+            
+        }
     }
-    */
+ 
 }
 
 

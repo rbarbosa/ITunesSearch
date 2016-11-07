@@ -57,4 +57,10 @@ final class ListViewModel {
             }
         })
     }
+    
+    
+    // MARK: - Detail view model
+    func detailViewModel(for indexPath: IndexPath) -> DetailViewModel {
+        return DetailViewModel(track: tracks[indexPath.row], dataSource: dataSource)
+    }
 }

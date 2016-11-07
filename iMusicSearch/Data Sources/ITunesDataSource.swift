@@ -27,6 +27,7 @@ final class ITunesDataSource {
         static let collectionPrice = "collectionPrice"
         static let trackPrice = "trackPrice"
         static let releaseDate = "releaseDate"
+        static let currency = "currency"
         
     }
     
@@ -35,8 +36,9 @@ final class ITunesDataSource {
     
     private lazy var iTunesDateFormatter: DateFormatter = {
         // 2005-07-05T07:00:00Z
+        // 2012-01-09T15:05:26Z
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd'T'hh:mm:00'Z'"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         return dateFormatter
     }()
     
@@ -117,6 +119,7 @@ final class ITunesDataSource {
                 let releaseDate = date(from: item[ITunesKeys.releaseDate] as! String)
                 let price =  item[ITunesKeys.trackPrice] as! NSNumber
                 let trackViewUrl = item[ITunesKeys.trackViewUrl] as! String
+                let currency = item[ITunesKeys.currency] as! String
                 
                 let track = Track(trackName: trackName,
                                   artistname: artistName,
@@ -125,7 +128,8 @@ final class ITunesDataSource {
                                   artworkThumbnailUrl: artWorkThumbnail,
                                   releaseDate: releaseDate,
                                   price: price,
-                                  trackViewUrl: trackViewUrl)
+                                  trackViewUrl: trackViewUrl,
+                                  currency: currency)
                 
                 tracks.append(track)
             }
