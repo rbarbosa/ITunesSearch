@@ -27,13 +27,10 @@ final class ListViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     private func setUpTableView() {
-        listTableView.register(UITableViewCell.self, forCellReuseIdentifier: "ListCell")
-        
         listTableView.delegate = self
         listTableView.dataSource = self
     }
@@ -66,17 +63,21 @@ extension ListViewController: UITableViewDataSource {
         return 1
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfItems()
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell", for: indexPath) as! ListItemCell
+        
+        // TODO: Check if is necessary to cancel download image for dequeued cells
+        cell.viewModel = viewModel.listItelCellViewMode(for: indexPath)
         
         return cell
     }
-    
 }
 
 

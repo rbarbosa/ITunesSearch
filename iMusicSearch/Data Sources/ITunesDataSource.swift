@@ -40,6 +40,8 @@ final class ITunesDataSource {
         return dateFormatter
     }()
     
+    // TODO: Try to cancel download image if needed
+    var imageDownloadTask: URLSessionTask?
     
     init() {
         sessionConfig = URLSessionConfiguration.default
@@ -139,5 +141,36 @@ final class ITunesDataSource {
     
     private func date(from string: String) -> Date {
         return iTunesDateFormatter.date(from: string)!
+    }
+    
+    
+    
+    // MARK: - Download images
+    func downloadImage(from url: String, completion: @escaping (_ imageData: Data?) -> Void) {
+        let imageUrl = URL(string: url)
+        
+        guard imageUrl != nil else {
+            completion(nil)
+            return
+        }
+        
+        imageDownloadTask = session.dataTask(with: imageUrl!, completionHandler: { (data, response, error) in
+            if error == nil {
+                let httpResponse = response as? HTTPURLResponse
+                if httpResponse?.statusCode == 200 {
+                    guard data != nil else {
+                        // TODO: Add message to no data
+                        completion(nil)
+                        return
+                    }
+                    completion(data)
+                }
+            } else {
+                print("Couldn't load image from url: \(imageUrl)")
+                completion(nil)
+            }
+        })
+        
+     imageDownloadTask?.resume()
     }
 }

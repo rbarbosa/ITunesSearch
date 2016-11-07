@@ -37,6 +37,13 @@ final class ListViewModel {
     
     
     
+    // MARK: - Cell view model
+    func listItelCellViewMode(for indexPath: IndexPath) -> ListItemCellViewModel {
+        return ListItemCellViewModel(track: tracks[indexPath.row], dataSource: dataSource)
+    }
+    
+    
+    
     // MARK: - Search
     func search(for content: String, completion: @escaping (_ errorMessage: String?) -> Void) {
         title = content

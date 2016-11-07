@@ -17,6 +17,8 @@
 		F460C8591DCE414E0041953E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460C8581DCE414E0041953E /* ListViewModel.swift */; };
 		F4ED07E81DD0916800702715 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07E71DD0916800702715 /* Track.swift */; };
 		F4ED07EC1DD097E900702715 /* ITunesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07EB1DD097E900702715 /* ITunesDataSource.swift */; };
+		F4ED07EE1DD0D46B00702715 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07ED1DD0D46B00702715 /* ListItemCell.swift */; };
+		F4ED07F01DD0D77D00702715 /* ListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07EF1DD0D77D00702715 /* ListItemCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		F460C8581DCE414E0041953E /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		F4ED07E71DD0916800702715 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		F4ED07EB1DD097E900702715 /* ITunesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesDataSource.swift; sourceTree = "<group>"; };
+		F4ED07ED1DD0D46B00702715 /* ListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
+		F4ED07EF1DD0D77D00702715 /* ListItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F460C8541DCE3BD90041953E /* View Controllers */,
+				F4ED07ED1DD0D46B00702715 /* ListItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				F460C8581DCE414E0041953E /* ListViewModel.swift */,
+				F4ED07EF1DD0D77D00702715 /* ListItemCellViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -314,6 +320,8 @@
 			files = (
 				F460C8571DCE3DBA0041953E /* ListViewController.swift in Sources */,
 				F460C8241DCE3AEC0041953E /* AppDelegate.swift in Sources */,
+				F4ED07F01DD0D77D00702715 /* ListItemCellViewModel.swift in Sources */,
+				F4ED07EE1DD0D46B00702715 /* ListItemCell.swift in Sources */,
 				F4ED07EC1DD097E900702715 /* ITunesDataSource.swift in Sources */,
 				F460C8591DCE414E0041953E /* ListViewModel.swift in Sources */,
 				F4ED07E81DD0916800702715 /* Track.swift in Sources */,
