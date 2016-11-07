@@ -13,6 +13,10 @@
 		F460C82E1DCE3AEC0041953E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F460C82C1DCE3AEC0041953E /* LaunchScreen.storyboard */; };
 		F460C8391DCE3AEC0041953E /* iMusicSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460C8381DCE3AEC0041953E /* iMusicSearchTests.swift */; };
 		F460C8441DCE3AEC0041953E /* iMusicSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460C8431DCE3AEC0041953E /* iMusicSearchUITests.swift */; };
+		F460C8571DCE3DBA0041953E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460C8561DCE3DBA0041953E /* ListViewController.swift */; };
+		F460C8591DCE414E0041953E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460C8581DCE414E0041953E /* ListViewModel.swift */; };
+		F4ED07E81DD0916800702715 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07E71DD0916800702715 /* Track.swift */; };
+		F4ED07EC1DD097E900702715 /* ITunesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED07EB1DD097E900702715 /* ITunesDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		F460C83F1DCE3AEC0041953E /* iMusicSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMusicSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F460C8431DCE3AEC0041953E /* iMusicSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMusicSearchUITests.swift; sourceTree = "<group>"; };
 		F460C8451DCE3AEC0041953E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F460C8561DCE3DBA0041953E /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = "iMusicSearch/Views/View Controllers/ListViewController.swift"; sourceTree = SOURCE_ROOT; };
+		F460C8581DCE414E0041953E /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		F4ED07E71DD0916800702715 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		F4ED07EB1DD097E900702715 /* ITunesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +103,10 @@
 		F460C8221DCE3AEC0041953E /* iMusicSearch */ = {
 			isa = PBXGroup;
 			children = (
-				F460C8551DCE3C110041953E /* View Models */,
-				F460C8531DCE3BCB0041953E /* Views */,
-				F460C8521DCE3BBA0041953E /* Models */,
 				F460C8511DCE3BAF0041953E /* Data Sources */,
+				F460C8521DCE3BBA0041953E /* Models */,
+				F460C8531DCE3BCB0041953E /* Views */,
+				F460C8551DCE3C110041953E /* View Models */,
 				F460C8231DCE3AEC0041953E /* AppDelegate.swift */,
 				F460C8271DCE3AEC0041953E /* Main.storyboard */,
 				F460C82A1DCE3AEC0041953E /* Assets.xcassets */,
@@ -129,6 +137,7 @@
 		F460C8511DCE3BAF0041953E /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F4ED07EB1DD097E900702715 /* ITunesDataSource.swift */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -136,6 +145,7 @@
 		F460C8521DCE3BBA0041953E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F4ED07E71DD0916800702715 /* Track.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +161,7 @@
 		F460C8541DCE3BD90041953E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F460C8561DCE3DBA0041953E /* ListViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "Views/View Controllers";
@@ -159,8 +170,9 @@
 		F460C8551DCE3C110041953E /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				F460C8581DCE414E0041953E /* ListViewModel.swift */,
 			);
-			name = "View Models";
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F460C8571DCE3DBA0041953E /* ListViewController.swift in Sources */,
 				F460C8241DCE3AEC0041953E /* AppDelegate.swift in Sources */,
+				F4ED07EC1DD097E900702715 /* ITunesDataSource.swift in Sources */,
+				F460C8591DCE414E0041953E /* ListViewModel.swift in Sources */,
+				F4ED07E81DD0916800702715 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +565,7 @@
 				F460C84A1DCE3AEC0041953E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F460C84B1DCE3AEC0041953E /* Build configuration list for PBXNativeTarget "iMusicSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +574,7 @@
 				F460C84D1DCE3AEC0041953E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F460C84E1DCE3AEC0041953E /* Build configuration list for PBXNativeTarget "iMusicSearchUITests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +583,7 @@
 				F460C8501DCE3AEC0041953E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
